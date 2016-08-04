@@ -1,0 +1,44 @@
+
+    <html>
+    <head>
+      <!-- SCROLLS -->
+      <!-- load bootstrap and fontawesome via CDN -->
+      <link rel="stylesheet" href="dist/css/bootstrap.min.css" />
+     
+
+      <!-- SPELLS -->
+      <!-- load angular and angular route via CDN -->
+      <script src="angular.min.js"></script>
+          <script src="ui-router.min.js"></script>
+      <script src="script.js"></script>
+
+      <style>
+        .navbar { border-radius:0; }
+    </style>
+    </head>
+   <!-- apply our angular app to our site -->
+<body ng-app="routerApp">
+
+<!-- NAVIGATION -->
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="navbar-header">
+        <a class="navbar-brand" ui-sref="#">AngularUI Router</a>
+    </div>
+    <ul class="nav navbar-nav">
+        <li><a ui-sref="home">Home</a></li>
+        <li><a ui-sref="about">About</a></li>
+        <li><a ui-sref="contact">contact</a></li>
+        <li><a ui-sref="Login">Login</a></li>
+    </ul>
+</nav>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+
+    <!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
+    <div ui-view> </div>
+
+</div>
+
+</body>
+</html>
